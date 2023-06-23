@@ -4,14 +4,22 @@ Cinema application backend Java, MySQL
 Bioskop aplikacija
 
 Web aplikacija - za backend korišćena Java kao programski jezik I Spring Boot kao radni okvir, kao baza podataka korišćen je MySQL.
+
 Bioskopska aplikacija koju koriste 3 grupe korisnika: neprijavljeni korisnici, prijavljeni korisnici i administratori.
+
 Aplikacija rukuje sledećim elementima:
+
 -Tip projekcije (2D, 3D, 4D): ID, naziv.
 -Sala: ID, naziv, tipovi projekcija (jedan ili više mogućih tipova projekcija).
+
 -Sedište: Redni broj (jedinstveno na nivou sale), sala (kojoj sedište pripada).
+
 -Film: ID, naziv, režiser, trajanje, distributer, zemlja porekla, godina proizvodnje, opis, link ka posteru filma I link ka imdb stranici filma.
+
 -Projekcija:  ID, film koji se prikazuje (administrator bira među ponuđenima, a povezuje aplikacija), tip projekcije (administrator bira među ponuđenima, a povezuje aplikacija), sala (administrator bira među ponuđenima, a povezuje aplikacija), datum i vreme prikazivanja, cena karte, administrator koji je dodao projekciju (povezuje aplikacija).
+
 Pri unosu nove projekcije sala mora da ispuni zahteve odabranog tipa projekcije. Datum i vreme prikazivanja ne smeju biti u prošlosti. Sala mora biti slobodna (ne sme imati za sebe vezanu projekciju takvu da trajanje filma u odnosu na njen datum i vreme prikazivanja premašuju datum i vreme prikazivanja projekcije koja se dodaje).
+
 -Karta: ID, projekcija za koju se kupuje karta (običan korisnik bira, a povezuje aplikacija), sedište za koje se kupuje karta (običan korisnik bira, a povezuje aplikacija), datum i vreme prodaje (generiše aplikacija), običan korisnik koji je kupio kartu (povezuje aplikacija)
 Pri kupovini karte, početak projekcije ne sme biti u prošlosti. Sedište ne sme biti zauzeto (ne sme imati prodatu kartu za datu projekciju).
 -Korisnik: ID, korisničko ime (jedinstveno, može da sadrži samo alfanumeričke karaktere i to bez razmaka, minimalne dužine 3 karaktera), lozinka (može da sadrži samo alfanumeričke karaktere i to bez razmaka, minimalne dužine 5 karaktera), ime (minimalno dva slova), prezime (minimalno dva slova), email, datum registracije (generiše aplikacija), uloga (običan korisnik ili administrator)
