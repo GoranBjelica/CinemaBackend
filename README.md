@@ -97,6 +97,7 @@ Administratorima je omogućen pristup posebnoj stranici za izveštavanje. Za une
 2) broj projekcija
 3) broj prodatih karata
 4) ukupnu cenu prodatih karata
+5) 
 U poslednjem redu tabele prikazan je i ukupan broj projekcija, ukupan broj prodatih karata i ukupna cena svih prodatih karata po svim filmovima za odabrani period.
 
 
